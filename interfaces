@@ -1,0 +1,114 @@
+auto lo
+iface lo inet loopback
+
+#################################################################
+#LAN
+auto enp3s0f0
+iface enp3s0f0 inet manual
+
+auto vmbr0
+iface vmbr0 inet static
+        address 10.0.0.2/16
+	gateway 10.0.0.1
+	nameservers 10.0.0.1
+	dns-domain example.com
+	dns-search ecomxample.
+	bridge-ports enp3s0f0
+	bridge-stp off
+	bridge-fd 0
+
+##################################################################
+#VLAN 1
+
+auto enp3s0f0.1
+iface enp3s0f0.1 inet manual
+
+auto vmbr1
+iface vmbr1 inet manual
+    bridge-ports enp3s0f0.1
+    bridge-stp off
+    bridge-fd 0
+
+##################################################################
+#VLAN 2
+
+auto enp3s0f0.2
+iface enp3s0f0.2 inet manual
+
+auto vmbr2
+iface vmbr2 inet manual
+    bridge-ports enp3s0f0.2
+    bridge-stp off
+    bridge-fd 0
+
+##################################################################
+#VLAN 3
+
+auto enp3s0f0.3
+iface enp3s0f0.3 inet manual
+
+auto vmbr3
+iface vmbr3 inet manual
+    bridge-ports enp3s0f0.3
+    bridge-stp off
+    bridge-fd 0
+
+##################################################################
+#VLAN 4
+
+auto enp3s0f0.4
+iface enp3s0f0.4 inet manual
+
+auto vmbr4
+iface vmbr4 inet manual
+    bridge-ports enp3s0f0.4
+    bridge-stp off
+    bridge-fd 0
+
+##################################################################
+#VLAN 5
+
+auto enp3s0f0.5
+iface enp3s0f0.5 inet manual
+
+auto vmbr5
+iface vmbr5 inet manual
+    bridge-ports enp3s0f0.5
+    bridge-stp off
+    bridge-fd 0
+
+##################################################################
+#VLAN 6
+
+auto enp3s0f0.6
+iface enp3s0f0.6 inet manual
+
+auto vmbr6
+iface vmbr6 inet manual
+    bridge-ports enp3s0f0.6
+    bridge-stp off
+    bridge-fd 0
+
+##################################################################
+#VLAN 7
+
+auto enp3s0f0.7
+iface enp3s0f0.7 inet manual
+
+auto vmbr7
+iface vmbr7 inet manual
+    bridge-ports enp3s0f0.7
+    bridge-stp off
+    bridge-fd 0
+
+##################################################################
+#VLAN 8
+
+auto enp3s0f0.8
+iface enp3s0f0.8 inet manual
+
+auto vmbr8
+iface vmbr8 inet manual
+    bridge-ports enp3s0f0.8
+    bridge-stp off
+    bridge-fd 0
